@@ -8,10 +8,10 @@ module.exports = (input) => {
   }
 
   rovers.forEach(rover => {
-    var coords = rover.coords.split(' ');
-    var x = parseInt(coords[0]);
-    var y = parseInt(coords[1]);
-    var orientation = coords[2];
+    const coords = rover.coords.split(' ');
+    let x = parseInt(coords[0]);
+    let y = parseInt(coords[1]);
+    let orientation = coords[2];
     rover.movements.split('').forEach(movement => {
       if (movement === 'M') {
         if (orientation === 'N') {

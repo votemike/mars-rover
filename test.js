@@ -21,6 +21,8 @@ assert(getOutput('1 1\n1 0 N\nMLMLMLM') === '1 0 E');
 assert(getOutput('1 1\n1 0 N\nMLMLMLML') === '1 0 N');
 assert(getOutput('5 5\n1 2 N\nLMLMLMLMM') === '1 3 N');
 assert(getOutput('5 5\n3 3 E\nMMRMMRMRRM') === '5 1 E');
-// Multiple rovers
+// 2 rovers
 assert(getOutput('1 1\n0 0 N\n\n1 1 N\n') === '0 0 N\n1 1 N');
 assert(getOutput('5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM') === '1 3 N\n5 1 E');
+// 3 rovers
+assert(getOutput('5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM\n0 0 N\nMMM') === '1 3 N\n5 1 E\n0 3 N');
